@@ -57,7 +57,7 @@ def add_movie():
 
 
 @app.route('/movie/<int:movie_id>', methods=['GET','POST'])
-def friend(movie_id):
+def movie(movie_id):
     movie = movie_names.query.get_or_404(movie_id)
     return render_template('movie.html', form=movie, pageTitle='Movie Details')
 
